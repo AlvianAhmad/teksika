@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
-  <link rel="stylesheet" href="{{ ('css/welcome.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 </head>
 <body>
 
@@ -33,5 +33,7 @@
   <svg class="triangle t4" viewBox="0 0 300 300">
     <polygon points="80,280 260,80 140,40"/>
   </svg>
+
+  <script src="{{ asset('js/welcome.js') }}"></script>
 </body>
-<script src="{{ asset('js/welcome.js') }}"></script>
+</html>
