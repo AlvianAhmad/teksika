@@ -1,0 +1,94 @@
+ body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #0a84ff;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      transition: transform 1s ease-in-out;
+    }
+
+    /* ===== LOGO ===== */
+    .logo {
+      width: 250px;
+      height: 250px;
+      animation: rotateSret 2s ease-in-out 1, pop 1s ease forwards 2s;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes rotateSret {
+      0% { transform: rotate(0deg); }
+      20% { transform: rotate(100deg); }
+      40% { transform: rotate(190deg); }
+      60% { transform: rotate(260deg); }
+      80% { transform: rotate(340deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.8); }
+      100% { transform: scale(1.2); }
+    }
+
+    /* ===== TEKS ===== */
+    .text {
+      opacity: 0;
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: fadeIn 1s ease forwards 3s;
+    }
+
+    .subtitle {
+      opacity: 0;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #d0d0d0;
+      animation: fadeIn 1s ease forwards 3.5s;
+      text-align: center;
+      line-height: 1.4em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SEGITIGA GARIS ===== */
+    .triangle {
+      position: absolute;
+      stroke: rgb(255, 255, 255);
+      stroke-width: 2;
+      fill: none;
+      opacity: 0;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: draw 2s ease forwards 3s;
+    }
+
+    .t1 { top: 10%; left: 5%; width: 250px; }
+    .t2 { top: 0%; right: 5%; width: 300px; }
+    .t3 { bottom: 10%; left: 0%; width: 280px; }
+    .t4 { bottom: 0%; right: 10%; width: 320px; }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+    }
+
+    /* ===== HALAMAN SLIDE DOWN ===== */
+    .slide-down {
+      transform: translateY(100%);
+    }
